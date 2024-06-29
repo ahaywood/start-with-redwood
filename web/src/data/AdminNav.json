@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "home",
+    "name": "Dashboard",
+    "path": "/admin/dashboard"
+  },
+  {
+    "icon": "user",
+    "name": "Users",
+    "path": "/admin/users"
+  },
+  {
+    "icon": "money",
+    "name": "Products",
+    "path": "/admin/products"
+  },
+  {
+    "icon": "image",
+    "name": "Assets",
+    "path": "/admin/assets"
+  },
+  {
+    "icon": "group",
+    "name": "Collections",
+    "path": "/admin/collections"
+  }
+]

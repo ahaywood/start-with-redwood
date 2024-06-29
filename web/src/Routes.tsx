@@ -10,6 +10,7 @@
 import { Router, Route, PrivateSet } from '@redwoodjs/router'
 
 import { useAuth } from './auth'
+import AdminLayout from './layouts/AdminLayout'
 
 const Routes = () => {
   return (
@@ -19,7 +20,7 @@ const Routes = () => {
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-      <PrivateSet unauthenticated="login">
+      <PrivateSet wrap={AdminLayout} unauthenticated="login">
         <Route path="/dashboard" page={DashboardPage} name="dashboard" />
       </PrivateSet>
       <Route notfound page={NotFoundPage} />

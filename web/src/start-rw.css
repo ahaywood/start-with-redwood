@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, html > body, body {
+    @apply m-0 p-0 font-sans text-white bg-richBlack;
+  }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+  .admin-layout {
+    @apply grid grid-cols-[286px_1fr] gap-x-5;
+  }
+
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
