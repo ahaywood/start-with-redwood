@@ -9,10 +9,24 @@
   html, html > body, body {
     @apply m-0 p-0 font-sans text-white bg-richBlack;
   }
+
+  svg {
+    @apply fill-current;
+  }
 }
 
 @layer components {
-
+  aside nav {
+    h3 a { @apply flex items-center gap-5 font-bold text-sm leading-normal mb-3; }
+    h3 svg { @apply text-submarine; }
+    h3:has(+ h3) { @apply mb-6; }
+    ul { @apply mb-6; }
+    ul li { @apply mb-3; }
+    ul li:last-child { @apply mb-0; }
+    ul li a { @apply text-sm text-submarine pl-[45px]; }
+    a.active { @apply text-java; }
+    a { @apply hover:text-selectiveYellow; }
+  }
 }
 
 @layer utilities {

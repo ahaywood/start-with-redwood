@@ -1,6 +1,8 @@
 export const schema = gql`
   type User {
     id: Int!
+    name: String!
+    avatar: String
     email: String!
     resetToken: String
     resetTokenExpiresAt: DateTime
@@ -13,6 +15,8 @@ export const schema = gql`
   }
 
   input CreateUserInput {
+    name: String!
+    avatar: String
     email: String!
     hashedPassword: String!
     salt: String!
@@ -21,6 +25,8 @@ export const schema = gql`
   }
 
   input UpdateUserInput {
+    name: String
+    avatar: String
     email: String
     hashedPassword: String
     salt: String

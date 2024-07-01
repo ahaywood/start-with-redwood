@@ -16,12 +16,27 @@ const Routes = () => {
   return (
     <Router useAuth={useAuth}>
       <Route path="/" page={HomePage} name="home" />
+
+      {/* LOGIN / AUTH ROUTES */}
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
+
+      {/* ADMIN */}
       <PrivateSet wrap={AdminLayout} unauthenticated="login">
+        <Route path="/my-account" page={MyAccountPage} name="myAccount" />
+        <Route path="/purchases" page={PurchasesPage} name="purchases" />
         <Route path="/dashboard" page={DashboardPage} name="dashboard" />
+        <Route path="/groups" page={GroupsPage} name="groups" />
+        <Route path="/assets" page={AssetsPage} name="assets" />
+        <Route path="/customers" page={CustomersPage} name="customers" />
+        <Route path="/subscriptions" page={SubscriptionsPage} name="subscriptions" />
+        <Route path="/products" page={ProductsPage} name="products" />
+        <Route path="/users" page={UsersPage} name="users" />
+        <Route path="/support" page={SupportPage} name="support" />
+        <Route path="/super-admin" page={SuperAdminPage} name="superAdmin" />
+        <Route path="/permissions" page={PermissionsPage} name="permissions" />
       </PrivateSet>
       <Route notfound page={NotFoundPage} />
     </Router>

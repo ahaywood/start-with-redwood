@@ -9,7 +9,7 @@ module.exports = {
         'blank-state': 'url("/images/bg-empty-state.svg")',
         gradient: 'url("/images/bg-gradient.svg")',
       },
-      border: {
+      borderWidth: {
         1: '1px',
       },
       colors: {

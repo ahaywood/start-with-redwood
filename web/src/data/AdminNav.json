@@ -5,6 +5,16 @@
     "path": "/admin/dashboard"
   },
   {
+    "children": [
+      {
+        "name": "Groups",
+        "path": "/admin/users/groups"
+      },
+      {
+        "name": "Purchases",
+        "path": "/admin/users/purchases"
+      }
+    ],
     "icon": "user",
     "name": "Users",
     "path": "/admin/users"

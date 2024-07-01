@@ -7,7 +7,7 @@ type AdminLayoutProps = {
 const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <div className="admin-layout min-h-screen w-screen bg-gradient bg-no-repeat">
-      <aside>
+      <aside className="max-h-screen overflow-y-auto border-r-1 border-r-montana pl-[50px]">
         <AdminNav />
       </aside>
       <main>
