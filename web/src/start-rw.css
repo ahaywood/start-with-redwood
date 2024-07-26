@@ -27,14 +27,36 @@
     a.active { @apply text-java; }
     a { @apply hover:text-selectiveYellow; }
   }
+
+  .top-nav {
+    @apply flex items-center justify-end gap-7;
+    button { @apply text-submarine hover:text-selectiveYellow; }
+  }
+
+  .auth-form {
+    h1 { @apply font-serif text-5xl text-white font-bold tracking-tight; }
+    .field { @apply mb-5 relative; }
+    label { @apply text-white leading-loose; }
+    input { @apply w-full bg-black text-white border-2 border-charcoal rounded-md px-4 h-12; }
+    input + svg { @apply absolute right-3 top-[52px] text-[#9e9e9e]; }
+    input:has(+ svg) { @apply pr-14; }
+    label:has(+ input:focus) { @apply text-java; }
+    input:focus { @apply border-java; }
+    input:focus + svg { @apply text-java; }
+    .button { @apply bg-gossamer hover:bg-java text-white flex items-center justify-center font-bold h-12 rounded-md w-full; }
+  }
 }
 
 @layer utilities {
   .admin-layout {
-    @apply grid grid-cols-[286px_1fr] gap-x-5;
+    @apply grid grid-cols-[286px_1fr];
   }
 
   .center {
     @apply flex items-center justify-center;
+  }
+
+  .main-padding {
+    @apply pl-mainLeft pr-mainRight pt-mainTop;
   }
 }

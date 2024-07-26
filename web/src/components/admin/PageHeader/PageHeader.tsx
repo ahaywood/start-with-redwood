@@ -1,8 +1,66 @@
-const PageHeader = () => {
+import { Link } from '@redwoodjs/router'
+
+import Breadcrumbs, { BreadcrumbType } from '../Breadcrumbs/Breadcrumbs'
+import DropdownMenu from '../DropdownMenu/DropdownMenu'
+import Icon from '../Icon/Icon'
+import Notifications from '../Notifications/Notifications'
+
+interface Props {
+  backLink?: string
+  title: string
+  breadcrumbs?: BreadcrumbType[]
+}
+
+const PageHeader = ({ backLink = '', title, breadcrumbs = [] }: Props) => {
   return (
-    <div>
-      <h2>{'PageHeader'}</h2>
-      <p>{'Find me in ./web/src/components/PageHeader/PageHeader.tsx'}</p>
+    <div className="border-b-1 border-montana pr-mainRight pt-4">
+      <div className="relative mb-3 flex justify-between pl-mainLeft">
+        {backLink && (
+          <Link to={backLink} className="absolute left-5">
+            <Icon id="arrowLeft" />
+          </Link>
+        )}
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <ul className="top-nav">
+          <li>
+            <button>
+              <Icon id="moon" />
+            </button>
+          </li>
+          <li>
+            <button className="relative">
+              <Icon id="activity" />
+              <div className="absolute -bottom-[2px] -right-[2px]">
+                <Notifications notificationType="red" />
+              </div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <Icon id="help" />
+            </button>
+          </li>
+          <li>
+            <button className="relative">
+              <Icon id="speech" />
+              <div className="absolute -bottom-[2px] -right-[2px]">
+                <Notifications notificationType="red" />
+              </div>
+            </button>
+          </li>
+          <li>
+            <button className="relative">
+              <Icon id="bell" />
+              <div className="absolute -bottom-[2px] -right-[2px]">
+                <Notifications notificationType="red" />
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <h1 className="mb-8 pl-mainLeft font-serif text-[42px] font-bold tracking-tight">
+        {title}
+      </h1>
     </div>
   )
 }

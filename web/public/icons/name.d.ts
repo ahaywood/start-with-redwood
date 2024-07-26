@@ -2,6 +2,7 @@
 
 export type IconName =
 	| "account"
+	| "activity"
 	| "arrowCircleRight"
 	| "arrowLeft"
 	| "bell"

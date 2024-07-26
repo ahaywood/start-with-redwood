@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
-import { routes } from '@redwoodjs/router'
+import { Link, routes } from '@redwoodjs/router'
 
 import { useAuth } from 'src/auth'
 import { useClickOutside } from 'src/hooks/useClickOutside'
@@ -26,7 +26,9 @@ const AccountBar = () => {
   return (
     <div className="mr-6 flex items-center justify-between gap-[14px] pt-9">
       <Avatar alt={currentUser.name} />
-      <div className="flex-1 text-sm font-bold">{currentUser.name}</div>
+      <div className="flex-1 text-sm font-bold">
+        <Link to={routes.profile()}>{currentUser.name}</Link>
+      </div>
       <div className="relative" ref={ref}>
         <AnimatePresence>
           {isDropdownShowing && (

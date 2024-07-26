@@ -8,19 +8,30 @@ module.exports = {
       backgroundImage: {
         'blank-state': 'url("/images/bg-empty-state.svg")',
         gradient: 'url("/images/bg-gradient.svg")',
+        auth: 'url("/images/bg-login.svg")',
+      },
+      backgroundPosition: {
+        'center-top': 'center top',
       },
       borderWidth: {
         1: '1px',
       },
       colors: {
+        charcoal: '#424242' /* dark gray */,
         richBlack: '#021110' /* almost black, green */,
         selectiveYellow: '#ffb700',
         tinGray: '#7e7e7e' /* middle gray */,
         roseWhite: '#fff5f5',
         java: '#1ccabf' /* green / teal */,
+        gossamer: '#009788' /* darker shade of green / teal */,
         submarine: '#8ba19f' /* middle gray / icon color */,
         darkPastelRed: '#bf4723',
         montana: '#363d3b' /* dark gray / border color */,
+      },
+      padding: {
+        mainLeft: '7rem',
+        mainRight: '4.125rem',
+        mainTop: '2rem',
       },
     },
   },

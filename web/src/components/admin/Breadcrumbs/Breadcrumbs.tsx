@@ -1,8 +1,29 @@
-const Breadcrumbs = () => {
+import { Fragment } from 'react'
+
+import { Link } from '@redwoodjs/router'
+
+export type BreadcrumbType = {
+  name: string
+  href: string
+}
+
+interface Props {
+  breadcrumbs: BreadcrumbType[]
+}
+
+const Breadcrumbs = ({ breadcrumbs }: Props) => {
+  if (breadcrumbs.length === 0) return <div />
   return (
-    <div>
-      <h2>{'Breadcrumbs'}</h2>
-      <p>{'Find me in ./web/src/components/Breadcrumbs/Breadcrumbs.tsx'}</p>
+    <div className="flex items-center text-sm font-bold text-submarine">
+      <div className="pr-3">/</div>
+      {breadcrumbs.map((breadcrumb, index) => (
+        <Fragment key={index}>
+          <div className="pr-3">
+            <Link to={breadcrumb.href}>{breadcrumb.name}</Link>
+          </div>
+          <div>/</div>
+        </Fragment>
+      ))}
     </div>
   )
 }
