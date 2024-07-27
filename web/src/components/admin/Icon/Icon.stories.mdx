@@ -1,0 +1,121 @@
+import { Canvas, Meta, Story, IconGallery, IconItem } from '@storybook/addon-docs';
+
+import Icon from './Icon';
+
+<Meta title="Components/admin/Icon" component={Icon} />
+
+export const Template = (args) => <div><Icon  {...args} /></div>;
+
+# Icons
+
+The icon component, displays an SVG Sprite. This is generated dynamically.
+
+* Add SVGs to the `scripts/svg-icons` folder
+* Within the Terminal run `yarn generate:icons` to generate the sprite and its corresponding types
+
+<div className="h-10" />
+
+<IconGallery>
+  <IconItem name="account">
+    <Icon id="account" className="text-black" />
+  </IconItem>
+  <IconItem name="activity">
+    <Icon id="activity" className="text-black" />
+  </IconItem>
+  <IconItem name="arrowCircleRight">
+    <Icon id="arrowCircleRight" className="text-black" />
+  </IconItem>
+  <IconItem name="arrowLeft">
+    <Icon id="arrowLeft" className="text-black" />
+  </IconItem>
+  <IconItem name="bell">
+    <Icon id="bell" className="text-black" />
+  </IconItem>
+  <IconItem name="chevronDown">
+    <Icon id="chevronDown" className="text-black" />
+  </IconItem>
+  <IconItem name="chevronUp">
+    <Icon id="chevronUp" className="text-black" />
+  </IconItem>
+  <IconItem name="close">
+    <Icon id="close" className="text-black" />
+  </IconItem>
+  <IconItem name="desktop">
+    <Icon id="desktop" className="text-black" />
+  </IconItem>
+  <IconItem name="dollarSign">
+    <Icon id="dollarSign" className="text-black" />
+  </IconItem>
+  <IconItem name="email">
+    <Icon id="email" className="text-black" />
+  </IconItem>
+  <IconItem name="expand">
+    <Icon id="expand" className="text-black" />
+  </IconItem>
+  <IconItem name="eye">
+    <Icon id="eye" className="text-black" />
+  </IconItem>
+  <IconItem name="eyeHidden">
+    <Icon id="eyeHidden" className="text-black" />
+  </IconItem>
+  <IconItem name="gear">
+    <Icon id="gear" className="text-black" />
+  </IconItem>
+  <IconItem name="group">
+    <Icon id="group" className="text-black" />
+  </IconItem>
+  <IconItem name="help">
+    <Icon id="help" className="text-black" />
+  </IconItem>
+  <IconItem name="house">
+    <Icon id="house" className="text-black" />
+  </IconItem>
+  <IconItem name="image">
+    <Icon id="image" className="text-black" />
+  </IconItem>
+  <IconItem name="lock">
+    <Icon id="lock" className="text-black" />
+  </IconItem>
+  <IconItem name="logout">
+    <Icon id="logout" className="text-black" />
+  </IconItem>
+  <IconItem name="money">
+    <Icon id="money" className="text-black" />
+  </IconItem>
+  <IconItem name="moon">
+    <Icon id="moon" className="text-black" />
+  </IconItem>
+  <IconItem name="pencil">
+    <Icon id="pencil" className="text-black" />
+  </IconItem>
+  <IconItem name="search">
+    <Icon id="search" className="text-black" />
+  </IconItem>
+  <IconItem name="send">
+    <Icon id="send" className="text-black" />
+  </IconItem>
+  <IconItem name="settings">
+    <Icon id="settings" className="text-black" />
+  </IconItem>
+  <IconItem name="shield">
+    <Icon id="shield" className="text-black" />
+  </IconItem>
+  <IconItem name="speech">
+    <Icon id="speech" className="text-black" />
+  </IconItem>
+  <IconItem name="sun">
+    <Icon id="sun" className="text-black" />
+  </IconItem>
+  <IconItem name="threeDots">
+    <Icon id="threeDots" className="text-black" />
+  </IconItem>
+  <IconItem name="trash">
+    <Icon id="trash" className="text-black" />
+  </IconItem>
+  <IconItem name="user">
+    <Icon id="user" className="text-black" />
+  </IconItem>
+  <IconItem name="xCircle">
+    <Icon id="xCircle" className="text-black" />
+  </IconItem>
+</IconGallery>

@@ -16,11 +16,15 @@ import Icon from './Icon'
 
 const meta: Meta<typeof Icon> = {
   component: Icon,
-  tags: ['autodocs'],
 }
 
 export default meta
 
 type Story = StoryObj<typeof Icon>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    id: 'trash',
+    size: 56,
+  },
+}
