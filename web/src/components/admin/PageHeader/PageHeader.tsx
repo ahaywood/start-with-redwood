@@ -1,9 +1,9 @@
 import { Link } from '@redwoodjs/router'
 
 import Breadcrumbs, { BreadcrumbType } from '../Breadcrumbs/Breadcrumbs'
-import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import Icon from '../Icon/Icon'
 import Notifications from '../Notifications/Notifications'
+import ThemeSelector from '../ThemeSelector/ThemeSelector'
 
 interface Props {
   backLink?: string
@@ -16,16 +16,17 @@ const PageHeader = ({ backLink = '', title, breadcrumbs = [] }: Props) => {
     <div className="border-b-1 border-montana pr-mainRight pt-4">
       <div className="relative mb-3 flex justify-between pl-mainLeft">
         {backLink && (
-          <Link to={backLink} className="absolute left-5">
+          <Link
+            to={backLink}
+            className="absolute left-5 hover:text-selectiveYellow"
+          >
             <Icon id="arrowLeft" />
           </Link>
         )}
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <ul className="top-nav">
           <li>
-            <button>
-              <Icon id="moon" />
-            </button>
+            <ThemeSelector />
           </li>
           <li>
             <button className="relative">
