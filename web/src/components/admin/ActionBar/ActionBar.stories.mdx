@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import ActionBar from './ActionBar';
+
+<Meta title="Components/admin/ActionBar" component={ActionBar} />
+
+export const Template = (args) => <ActionBar />;
+
+# Action Bar
+
+The `<ActionBar />` component is used to display the action buttons, fixed to the bottom of the screen.
+
+It doesn't take any props, but it does take children.
+
+The wrapping `div` inside the `ActionBar` component has a `className` of `flex`. So, if you want to display buttons on the left and right, your code will look like this:
+
+```tsx
+<ActionBar>
+  <>
+    <Button>Left Button</Button>
+    <Button>Right Button</Button>
+  </>
+</ActionBar>
+```
+
+If you only want to display buttons on the right, your code will look like this:
+
+```tsx
+<ActionBar>
+  <>
+    <div />
+    <Button>Right Button</Button>
+  </>
+</ActionBar>
+```
+
+If you only want to display buttons on the left, your code will look like this:
+
+```tsx
+<ActionBar>
+  <Button>Left Button</Button>
+</ActionBar>
+```

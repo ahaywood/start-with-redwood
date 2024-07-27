@@ -27,11 +27,23 @@ module.exports = {
         submarine: '#8ba19f' /* middle gray / icon color */,
         darkPastelRed: '#bf4723',
         montana: '#363d3b' /* dark gray / border color */,
+        error: {
+          lighter: '#db5e3b',
+          DEFAULT: '#bf4723',
+          darker: '#94371b',
+        },
+      },
+      margin: {
+        mainLeft: '7rem',
+        mainRight: '4.125rem',
+        sidebar: '286px',
       },
       padding: {
         mainLeft: '7rem',
         mainRight: '4.125rem',
         mainTop: '2rem',
+        sidebar: '286px',
+        18: '4.5rem',
       },
     },
   },

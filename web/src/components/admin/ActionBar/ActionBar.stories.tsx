@@ -16,11 +16,19 @@ import ActionBar from './ActionBar'
 
 const meta: Meta<typeof ActionBar> = {
   component: ActionBar,
-  tags: ['autodocs'],
 }
 
 export default meta
 
 type Story = StoryObj<typeof ActionBar>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    children: (
+      <>
+        <div>Left Side</div>
+        <div>Right Side</div>
+      </>
+    ),
+  },
+}

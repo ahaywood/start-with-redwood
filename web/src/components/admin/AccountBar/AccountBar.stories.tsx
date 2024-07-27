@@ -12,6 +12,8 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { AuthContext } from '@redwoodjs/auth'
+
 import AccountBar from './AccountBar'
 
 const meta: Meta<typeof AccountBar> = {
@@ -23,4 +25,13 @@ export default meta
 
 type Story = StoryObj<typeof AccountBar>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  render: () => {
+    mockCurrentUser({
+      id: '123',
+      name: 'Amy Dutton',
+      email: 'testemail@hello.com',
+    })
+    return <AccountBar />
+  },
+}

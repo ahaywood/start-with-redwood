@@ -17,7 +17,14 @@
     ]
   },
   "cSpell.words": [
+    "autodocs",
     "logomark",
+    "redwoodjs",
     "signup"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#570D40",
+    "titleBar.activeBackground": "#7A125A",
+    "titleBar.activeForeground": "#FFFCFE"
+  }
 }

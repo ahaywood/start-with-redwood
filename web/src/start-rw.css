@@ -70,4 +70,15 @@
   .main-padding {
     @apply pl-mainLeft pr-mainRight pt-mainTop;
   }
+
+  .button {
+    @apply flex items-center justify-center gap-2;
+    &.destructive { @apply text-error; }
+    &.destructive.solid { @apply bg-error text-white hover:bg-error-darker; }
+    &.primary.solid { @apply bg-gossamer text-white hover:bg-java; }
+    &.short { @apply py-3 px-6 rounded-md; }
+    &.shorter { @apply py-[6px] px-6 rounded-md; }
+    &.text { @apply text-white underline hover:text-selectiveYellow; }
+    &.primary.outline { @apply text-java border-java hover:bg-java hover:text-black }
+  }
 }
