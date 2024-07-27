@@ -45,6 +45,17 @@
     input:focus + svg { @apply text-java; }
     .button { @apply bg-gossamer hover:bg-java text-white flex items-center justify-center font-bold h-12 rounded-md w-full; }
   }
+
+  .search-input {
+    @apply relative;
+    &::placeholder { @apply text-sm; }
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      background: url('/images/xCircle.svg') right top no-repeat;
+      background-size: 24px 24px;
+      @apply absolute right-2 top-[10px] w-6 h-6 cursor-pointer;
+    }
+  }
 }
 
 @layer utilities {
