@@ -19,9 +19,11 @@ const Breadcrumbs = ({ breadcrumbs }: Props) => {
       {breadcrumbs.map((breadcrumb, index) => (
         <Fragment key={index}>
           <div className="pr-3">
-            <Link to={breadcrumb.href}>{breadcrumb.name}</Link>
+            <Link to={breadcrumb.href} className="hover:text-selectiveYellow">
+              {breadcrumb.name}
+            </Link>
           </div>
-          <div>/</div>
+          <div className="pr-3">/</div>
         </Fragment>
       ))}
     </div>
