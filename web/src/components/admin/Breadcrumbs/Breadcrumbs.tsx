@@ -3,8 +3,8 @@ import { Fragment } from 'react'
 import { Link } from '@redwoodjs/router'
 
 export type BreadcrumbType = {
-  name: string
   href: string
+  name: string
 }
 
 interface Props {

@@ -1,10 +1,10 @@
 interface Props {
   alt: string
-  src?: string
   size?: number
+  src?: string
 }
 
-const Avatar = ({ alt, src, size = 32 }: Props) => {
+const Avatar = ({ alt, size = 32, src }: Props) => {
   const getFirstLetter = () => alt.charAt(0).toUpperCase()
 
   return (

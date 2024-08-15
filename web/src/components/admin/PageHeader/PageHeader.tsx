@@ -8,11 +8,11 @@ import ThemeSelector from '../ThemeSelector/ThemeSelector'
 
 interface Props {
   backLink?: string
-  title: string
   breadcrumbs?: BreadcrumbType[]
+  title: string
 }
 
-const PageHeader = ({ backLink = '', title, breadcrumbs = [] }: Props) => {
+const PageHeader = ({ backLink = '', breadcrumbs = [], title }: Props) => {
   return (
     <div className="border-b-1 border-montana pr-mainRight pt-4">
       <div className="relative mb-3 flex justify-between pl-mainLeft">

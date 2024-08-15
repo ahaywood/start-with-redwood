@@ -8,8 +8,8 @@ interface Props {
   options: {
     handleClick?: () => void
     href?: string
-    name: string
     icon?: IconName
+    name: string
   }[]
 }
 
