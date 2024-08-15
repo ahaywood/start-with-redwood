@@ -1,5 +1,6 @@
 import { Link } from '@redwoodjs/router'
 
+import ActivityFeedButton from '../ActivityFeed/ActivityFeedButton/ActivityFeedButton'
 import Breadcrumbs, { BreadcrumbType } from '../Breadcrumbs/Breadcrumbs'
 import Icon from '../Icon/Icon'
 import Notifications from '../Notifications/Notifications'
@@ -19,6 +20,7 @@ const PageHeader = ({ backLink = '', title, breadcrumbs = [] }: Props) => {
           <Link
             to={backLink}
             className="absolute left-5 hover:text-selectiveYellow"
+            data-testid="backLink"
           >
             <Icon id="arrowLeft" />
           </Link>
@@ -29,19 +31,17 @@ const PageHeader = ({ backLink = '', title, breadcrumbs = [] }: Props) => {
             <ThemeSelector />
           </li>
           <li>
-            <button className="relative">
-              <Icon id="activity" />
-              <div className="absolute -bottom-[2px] -right-[2px]">
-                <Notifications notificationType="red" />
-              </div>
-            </button>
+            {/* activity */}
+            <ActivityFeedButton />
           </li>
           <li>
+            {/* help */}
             <button>
               <Icon id="help" />
             </button>
           </li>
           <li>
+            {/* support messages */}
             <button className="relative">
               <Icon id="speech" />
               <div className="absolute -bottom-[2px] -right-[2px]">

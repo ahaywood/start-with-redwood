@@ -23,4 +23,26 @@ export default meta
 
 type Story = StoryObj<typeof PageHeader>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    title: 'Home',
+  },
+}
+
+export const WithBacklink: Story = {
+  args: {
+    title: 'Home',
+    backLink: '/',
+  },
+}
+
+export const WithBreadcrumbs: Story = {
+  args: {
+    title: 'Home',
+    breadcrumbs: [
+      { name: 'Home', href: '/' },
+      { name: 'Admin', href: '/admin' },
+      { name: 'Users', href: '/admin/users' },
+    ],
+  },
+}

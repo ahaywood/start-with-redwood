@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         charcoal: '#424242' /* dark gray */,
+        bunker: '#2d2d2d',
         richBlack: '#021110' /* almost black, green */,
         selectiveYellow: '#ffb700',
         tinGray: '#7e7e7e' /* middle gray */,
@@ -44,6 +45,9 @@ module.exports = {
         mainTop: '2rem',
         sidebar: '286px',
         18: '4.5rem',
+      },
+      zIndex: {
+        slideOutPanel: 1000,
       },
     },
   },

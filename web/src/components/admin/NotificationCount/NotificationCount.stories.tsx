@@ -23,4 +23,8 @@ export default meta
 
 type Story = StoryObj<typeof NotificationCount>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    count: 5,
+  },
+}

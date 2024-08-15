@@ -8,7 +8,12 @@ import NotificationCount from './NotificationCount'
 describe('NotificationCount', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<NotificationCount />)
+      render(<NotificationCount count={5} />)
     }).not.toThrow()
+  })
+
+  it('renders the count correctly', () => {
+    const { getByText } = render(<NotificationCount count={5} />)
+    expect(getByText('5')).toBeInTheDocument()
   })
 })

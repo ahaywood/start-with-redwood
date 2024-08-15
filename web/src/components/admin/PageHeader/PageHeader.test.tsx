@@ -1,4 +1,4 @@
-import { render } from '@redwoodjs/testing/web'
+import { render, screen } from '@redwoodjs/testing/web'
 
 import PageHeader from './PageHeader'
 
@@ -8,7 +8,24 @@ import PageHeader from './PageHeader'
 describe('PageHeader', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<PageHeader />)
+      render(<PageHeader title="Home" />)
     }).not.toThrow()
+  })
+
+  it('renders the correct title', () => {
+    render(<PageHeader title="Home" />)
+    expect(screen.getByText('Home')).toBeInTheDocument()
+  })
+
+  it('renders the back link', () => {
+    render(<PageHeader title="Home" backLink="/" />)
+    const backLink = screen.getByTestId('backLink')
+    expect(backLink).toBeInTheDocument()
+    expect(backLink).toHaveAttribute('href', '/')
+  })
+
+  it('renders breadcrumbs', () => {
+    render(<PageHeader title="Home" breadcrumbs={[]} />)
+    expect(screen.getByTestId('breadcrumbs')).toBeInTheDocument()
   })
 })

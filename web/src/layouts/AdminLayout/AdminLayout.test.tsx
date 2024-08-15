@@ -6,6 +6,14 @@ import AdminLayout from './AdminLayout'
 //   https://redwoodjs.com/docs/testing#testing-pages-layouts
 
 describe('AdminLayout', () => {
+  beforeEach(() => {
+    mockCurrentUser({
+      id: '123',
+      name: 'Amy Dutton',
+      email: 'testemail@hello.com',
+    })
+  })
+
   it('renders successfully', () => {
     expect(() => {
       render(<AdminLayout />)

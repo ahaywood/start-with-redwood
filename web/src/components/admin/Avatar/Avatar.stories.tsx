@@ -23,4 +23,17 @@ export default meta
 
 type Story = StoryObj<typeof Avatar>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    alt: 'John Doe',
+    src: 'https://picsum.photos/seed/1723748791716/300/300',
+    size: 100,
+  },
+}
+
+export const InitialsOnly: Story = {
+  args: {
+    alt: 'John Doe',
+    size: 100,
+  },
+}

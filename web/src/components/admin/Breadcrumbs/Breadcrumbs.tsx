@@ -12,9 +12,12 @@ interface Props {
 }
 
 const Breadcrumbs = ({ breadcrumbs }: Props) => {
-  if (breadcrumbs.length === 0) return <div />
+  if (breadcrumbs.length === 0) return <div data-testid="breadcrumbs" />
   return (
-    <div className="flex items-center text-sm font-bold text-submarine">
+    <div
+      className="flex items-center text-sm font-bold text-submarine"
+      data-testid="breadcrumbs"
+    >
       <div className="pr-3">/</div>
       {breadcrumbs.map((breadcrumb, index) => (
         <Fragment key={index}>

@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ActivityFeed from './ActivityFeed'
+import ActivityFeedItem from './ActivityFeedItem'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('ActivityFeed', () => {
+describe('ActivityFeedItem', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ActivityFeed />)
+      render(<ActivityFeedItem />)
     }).not.toThrow()
   })
 })

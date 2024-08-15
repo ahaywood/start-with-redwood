@@ -12,23 +12,20 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Breadcrumbs from './Breadcrumbs'
+import ActivityFeedButton from './ActivityFeedButton'
 
-const meta: Meta<typeof Breadcrumbs> = {
-  component: Breadcrumbs,
+const meta: Meta<typeof ActivityFeedButton> = {
+  component: ActivityFeedButton,
   tags: ['autodocs'],
 }
 
 export default meta
 
-type Story = StoryObj<typeof Breadcrumbs>
+type Story = StoryObj<typeof ActivityFeedButton>
 
-export const Primary: Story = {
+export const Primary: Story = {}
+export const UnseenNotifications: Story = {
   args: {
-    breadcrumbs: [
-      { name: 'Home', href: '/' },
-      { name: 'Admin', href: '/admin' },
-      { name: 'Users', href: '/admin/users' },
-    ],
+    unseenNotifications: true,
   },
 }

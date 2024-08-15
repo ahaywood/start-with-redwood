@@ -12,7 +12,11 @@ const Avatar = ({ alt, src, size = 32 }: Props) => {
       className="center rounded-full border-1 border-white text-lg font-normal text-roseWhite"
       style={{ height: `${size}px`, width: `${size}px` }}
     >
-      {src ? <img src={src} alt={alt} /> : getFirstLetter()}
+      {src ? (
+        <img src={src} alt={alt} className="rounded-full" />
+      ) : (
+        getFirstLetter()
+      )}
     </div>
   )
 }

@@ -23,4 +23,20 @@ export default meta
 
 type Story = StoryObj<typeof Notifications>
 
-export const Primary: Story = {}
+export const Red: Story = {
+  args: {
+    notificationType: 'red',
+  },
+}
+
+export const Yellow: Story = {
+  args: {
+    notificationType: 'yellow',
+  },
+}
+
+export const Green: Story = {
+  args: {
+    notificationType: 'green',
+  },
+}

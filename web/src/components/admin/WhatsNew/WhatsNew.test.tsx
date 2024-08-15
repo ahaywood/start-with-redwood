@@ -8,7 +8,11 @@ import WhatsNew from './WhatsNew'
 describe('WhatsNew', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<WhatsNew />)
+      render(
+        <WhatsNew markAsRead={() => {}}>
+          <p>Something</p>
+        </WhatsNew>
+      )
     }).not.toThrow()
   })
 })

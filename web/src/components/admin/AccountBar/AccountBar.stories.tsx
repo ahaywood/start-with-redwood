@@ -12,8 +12,6 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { AuthContext } from '@redwoodjs/auth'
-
 import AccountBar from './AccountBar'
 
 const meta: Meta<typeof AccountBar> = {

@@ -8,7 +8,11 @@ import ActionBar from './ActionBar'
 describe('ActionBar', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ActionBar />)
+      render(
+        <ActionBar>
+          <p>Something</p>
+        </ActionBar>
+      )
     }).not.toThrow()
   })
 })

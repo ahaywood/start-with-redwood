@@ -56,6 +56,23 @@
       @apply absolute right-2 top-[10px] w-6 h-6 cursor-pointer;
     }
   }
+
+  .activity-feed {
+    /* date */
+    .with-divider {
+      @apply flex items-center gap-2 mb-8;
+      &:after { @apply border-t-1 border-java w-full flex-1 content-['']; }
+    }
+    /* activity list */
+    ul {
+      @apply pr-10;
+      li { @apply flex gap-4 mb-8; }
+      li div:has(svg) { @apply flex items-center justify-center p-2 rounded-full bg-bunker text-submarine; }
+      li div svg { @apply w-6 h-6; }
+      li div:not(:has(svg)) { @apply pt-2; }
+      li a { @apply font-bold underline hover:text-selectiveYellow; }
+    }
+  }
 }
 
 @layer utilities {
