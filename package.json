@@ -7,11 +7,13 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.46.1",
     "@redwoodjs/auth-dbauth-setup": "7.7.4",
     "@redwoodjs/cli-storybook": "7.7.4",
     "@redwoodjs/cli-storybook-vite": "7.7.4",
     "@redwoodjs/core": "7.7.4",
     "@redwoodjs/project-config": "7.7.4",
+    "@types/node": "^22.4.1",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
   "eslintConfig": {
@@ -26,7 +28,8 @@
   },
   "packageManager": "yarn@4.3.0",
   "scripts": {
-    "build:icons": "tsx ./scripts/build-icons.mts"
+    "build:icons": "tsx ./scripts/build-icons.mts",
+    "test:e2e": "npx playwright test -c ./playwright.config.ts --trace on --workers 1 --reporter=list"
   },
   "dependencies": {
     "glob": "^10.4.2",
